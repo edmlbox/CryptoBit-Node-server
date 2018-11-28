@@ -4,26 +4,30 @@ var bitcoin = require("bitcoinjs-lib");
 var bigi = require("bigi");
 var buffer = require('buffer');
 var randomize = require('randomatic');
-require('@google-cloud/debug-agent').start();
+//Code below belongs to google app engine.
+/*require('@google-cloud/debug-agent').start();*/
 const fetch = require('node-fetch');
 var bodyParser = require('body-parser');
-const Datastore = require('@google-cloud/datastore');
+//Code below belongs to google app engine.
+/*const Datastore = require('@google-cloud/datastore');*/
 const crypto = require('crypto');
 const MongoClient = require('mongodb').MongoClient;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
-const datastore = Datastore();
 
-function insertVisit (visit) {
+//Code below belongs to google app engine.
+/*const datastore = Datastore();*/
+
+/*function insertVisit (visit) {
   return datastore.save({
     key: datastore.key('boss'),
     data: visit
   });
-}
+}*/
 
-function getVisits () {
+/*function getVisits () {
   const query = datastore.createQuery('boss')
     .order('timestamp', { descending: true })
     .limit(100);
@@ -33,14 +37,14 @@ function getVisits () {
       const entities = results[0];
       return entities.map((entity) => `Time: ${entity.timestamp}, AddrHash: ${entity.userIp}`);
     });
-}
+}*/
 
 app.get('/testConnection', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.send("Server is Running")
 })
-
-app.post('/evil/:userOBJ', (req, res, next) => {
+//Code below belongs to google app engine.
+/*app.post('/evil/:userOBJ', (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     const visit = {
         timestamp: new Date(),
@@ -59,7 +63,7 @@ app.post('/evil/:userOBJ', (req, res, next) => {
         })
         .catch(next);
 });
-
+*/
 
 
 var abcd = '';
@@ -324,7 +328,7 @@ app.post('/', (req, res) => {
 
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
     console.log('Press Ctrl+C to quit.');
