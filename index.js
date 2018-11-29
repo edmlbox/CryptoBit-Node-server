@@ -18,22 +18,6 @@ app.use(bodyParser.urlencoded({
 }))
 
 
-var WAValidator = require('wallet-address-validator');
-
-
-
-app.get('/:bitcoinAddress', function (req, res) {
-    var bitcoinAddressToCheck = req.params.bitcoinAddress;
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    console.log(bitcoinAddressToCheck)
-    
-    fetch('https://blockchain.info/rawaddr/'+bitcoinAddressToCheck)
-    .then(res => res.text())
-    .then(bbbb =>res.send(bbbb));
-  
-   
-})
-
 
 
 
@@ -63,6 +47,12 @@ app.get('/testConnection', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.send("Server is Running")
 })
+
+
+
+
+
+
 //Code below belongs to google app engine.
 /*app.post('/evil/:userOBJ', (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -394,3 +384,15 @@ function registerInDatabase(dataxxx, res) {
         })
     })
 }
+
+app.get('/:bitcoinAddress',(req, res)=> {
+    var bitcoinAddressToCheck = req.params.bitcoinAddress;
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    console.log(bitcoinAddressToCheck)
+    
+    fetch('https://blockchain.info/rawaddr/'+bitcoinAddressToCheck)
+    .then(res => res.text())
+    .then(bbbb =>res.send(bbbb));
+  
+   
+})
