@@ -1,0 +1,28 @@
+{
+  "name": "qwerty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bigi": "^1.4.2",
+    "bitcoinjs-lib": "^3.3.2",
+    "body-parser": "^1.18.3",
+    "buffer": "^5.1.0",
+    "crypto-random-string": "^1.0.0",
+    "express": "^4.16.3",
+    "knex": "^0.15.2",
+    "mongodb": "^3.1.7",
+    "mysql": "^2.16.0",
+    "node-fetch": "^2.2.0",
+    "qrcode": "^1.2.0",
+    "querystring": "^0.2.0",
+    "randomatic": "^3.0.0",
+    "xmlhttprequest": "^1.8.0",
+    "nodemailer": "^4.7.0"
+  }
+}
