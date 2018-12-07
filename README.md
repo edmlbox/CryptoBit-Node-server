@@ -1,5 +1,3 @@
-# CryptoBit-Node-server
-### CryptoBit: Bitcoin-wallet nodeJS server. (Back-End)
-
-
+# ExpressJS webserver with:
+### CryptoBit-Node-server (Back-End) merged with GethDesk application.
 #### This branch configured specifically for AWS Beanstalk cloud.
