@@ -201,7 +201,7 @@ img {
   left: 50vh;
   z-index: 1000;
   width: 22em;
-  height: 24em;
+
   background-color: var(--light);
   box-shadow: 0 0 16px #080808;
   padding: 1vw;
@@ -2619,7 +2619,7 @@ h4 {
   display: none;
 }
 #connect_form > span:first-child {
-  font-weight: bold;
+  font-weight: bold;display: none;
 }
 label {
   font-weight: bold;
